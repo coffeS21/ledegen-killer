@@ -20,6 +20,7 @@ function NewLegdenForm(props){
        const test =  type === "checkbox" ? setLegdenData({ [name]: checked }) : setLegdenData({ [name]: value })
     }
 
+    
 
     const handleSubmit = e=>{
         e.preventDefault()
@@ -27,7 +28,7 @@ function NewLegdenForm(props){
         setLegdenData(inputData)
     }
     // const test = legdenData.retired
-    // console.log(test)
+     console.log(legdenData.confrence)
 
     return(
         <>
@@ -39,6 +40,15 @@ function NewLegdenForm(props){
                 onChange={handleClick}
                 checked={legdenData.retired}
                 />
+                <label>Select confrence:</label>
+                <select
+                value={legdenData.confrence}
+                onChange={handleChange}
+                name="confrence"
+                >    
+                    <option value="east">east</option>    
+                    <option value="west">west</option>    
+                </select>
                 <input
                 type="text"
                 name="firstName"
@@ -52,13 +62,6 @@ function NewLegdenForm(props){
                 value={legdenData.lastName}
                 onChange={handleChange}
                 placeholder= "l name"
-                />
-                <input
-                type="text"
-                name="confrence"
-                value={legdenData.confrence}
-                onChange={handleChange}
-                placeholder= "conf"
                 />
                 <input
                 type="text"
