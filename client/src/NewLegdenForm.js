@@ -33,19 +33,20 @@ function NewLegdenForm(props){
     return(
         <>
             <form onSubmit={handleSubmit}>
-                
+                retied:
                 <input
                 type="checkbox"
                 name="retired"
                 onChange={handleClick}
                 checked={legdenData.retired}
                 />
-                <label>Select confrence:</label>
+                
                 <select
                 value={legdenData.confrence}
                 onChange={handleChange}
                 name="confrence"
                 >    
+                    <option value="east">Please Select Confrence</option>    
                     <option value="east">east</option>    
                     <option value="west">west</option>    
                 </select>
